@@ -7,6 +7,7 @@ package leagueadmin;
 import SQL.conection;
 import objects.*;
 import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author juanchis
@@ -84,10 +85,7 @@ public class PrincipalWin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        ArrayList<team> teams = c.getdata();
-        for(team f : teams){
-            System.out.println(f.getTeamName());
-        }
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**

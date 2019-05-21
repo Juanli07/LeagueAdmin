@@ -65,4 +65,8 @@ public class team {
     public int getPoints(){
         return this.points;
     }
+    @Override
+    public String toString(){
+        return "Team {"+"name :"+this.teamName+"Played games :"+this.playedGames;
+    }
 }
