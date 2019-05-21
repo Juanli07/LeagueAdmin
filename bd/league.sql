@@ -35,3 +35,8 @@ goals INT(10),
 penalties INT(10),
 FOREIGN KEY(team) REFERENCES team(name)
 );
+
+CREATE TABLE user(
+user VARCHAR(50) NOT NULL PRIMARY KEY,
+pass VARCHAR(50) NOT NULL,
+);
