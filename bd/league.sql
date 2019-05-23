@@ -15,15 +15,22 @@ difference INT(10),
 points INT(10)
 );
 
-CREATE TABLE games(
-journal INT NOT NULL PRIMARY KEY,
-team_1 VARCHAR(50),
-team_2 VARCHAR(50),
-goals_1 INT(10),
-goals_2 INT(10),
-scorers LONGTEXT,
-FOREIGN KEY(team_1) REFERENCES team(name),
-FOREIGN KEY(team_2) REFERENCES team(name)
+CREATE TABLE played_games(
+id INT NOT NULL PRIMARY KEY,
+journal INT(10),
+teams VARCHAR(50),
+schedule VARCHAR(50),
+date VARCHAR(50),
+scorers LONGTEXT
+);
+
+CREATE TABLE games_to_play(
+id INT NOT NULL PRIMARY KEY,
+journal INT,
+teams VARCHAR(50),
+schedule VARCHAR(50),
+date VARCHAR(50),
+scorers LONGTEXT
 );
 
 CREATE TABLE player(
@@ -38,5 +45,12 @@ FOREIGN KEY(team) REFERENCES team(name)
 
 CREATE TABLE user(
 user VARCHAR(50) NOT NULL PRIMARY KEY,
-pass VARCHAR(50) NOT NULL,
+pass VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE tournament(
+id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50),
+duration INT(10),
+description LONGTEXT
 );
