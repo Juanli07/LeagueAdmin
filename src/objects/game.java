@@ -43,4 +43,9 @@ public class game {
     public String getScorers(){
         return this.Scorers;
     }
+    
+    @Override
+    public String toString(){
+        return("Jornada: " + this.journal + " | Team 1: " + this.team1 + " | Team 2: " + this.team2 + " | Goals T1: " + this.goalsT1 + " | Goals T2: " + this.goalsT2 + " | Scorers: " + this.Scorers);
+    }
 }

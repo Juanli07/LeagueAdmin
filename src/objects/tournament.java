@@ -23,4 +23,8 @@ public class tournament {
     public String getTournamentDescription(){
         return this.tournamentDescription;
     }
+    
+    public String toString(){
+        return ("Tournament Name: " + this.tournamentName + " | Dournament Days: " + this.tournamentDays + " | Tournament Description: " + this.tournamentDescription);
+    }
 }

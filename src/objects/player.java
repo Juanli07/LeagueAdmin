@@ -35,4 +35,8 @@ public class player {
     public int getPenalties(){
         return this.penalties;
     }
+    
+    public String toString(){
+        return("idPlayer: " + this.idPlayer + " | teamName: " + this.teamName + " | position: " + this.position + " | Goals: " + this.goals + " | Penalties: " + this.penalties);
+    }
 }
