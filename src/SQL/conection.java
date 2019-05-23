@@ -36,6 +36,24 @@ public class conection {
         }
         return teams;
     }
+    public List<player> getPlayers(){
+         List<player> players = new ArrayList<>();
+        try {
+            Connection con = getConnection();
+            
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM player ORDER BY goals;");
+            ResultSet res= ps.executeQuery();
+            System.out.println(1);
+            
+            while(res.next()){
+                players.add(new player(res.getInt("id"), res.getString("name"), res.getString("team"), res.getString("possition"), res.getInt("goals"), res.getInt("penalties")));
+                System.out.print("Dato agregado");
+            }
+        } catch (SQLException e) {
+            System.out.println("No existen datos");
+        }
+        return players;
+    }
     public static Connection getConnection() {
         Connection con = null;
         try {
