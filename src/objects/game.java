@@ -7,17 +7,19 @@ public class game {
     private int journal;
     private String teams;
     private String schedule;
+    private String maker;
     private String date;
     private String scorers;
     
     
-    public game(int id, int jrnl, String teams, String schedule, String date, String scorers){
+    public game(int id, int jrnl, String teams, String schedule, String maker, String date, String scorers){
         this.id = id;
         this.journal = jrnl;
         this.teams = teams;
         this.schedule = schedule;
         this.date = date;
         this.scorers = scorers;
+        this.maker = maker;
         
     }
     
@@ -33,6 +35,9 @@ public class game {
     }
     public String getSchedule(){
         return this.schedule;
+    }
+    public String getMaker(){
+        return this.maker;
     }
     public String getDate(){
         return this.date;
