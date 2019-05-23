@@ -12,8 +12,9 @@ public class team {
     private int goalsAgainst;
     private int difference;
     private int points;
+    private int tournament_id;
     
-    public team(String tn, int pg, int gw, int gt, int gl, int penG, int gF, int gA, int dif, int pts){
+    public team(String tn, int pg, int gw, int gt, int gl, int penG, int gF, int gA, int dif, int pts, int tournament_id){
         this.teamName = tn;
         this.playedGames = pg;
         this.gamesWon = gw;
@@ -24,6 +25,7 @@ public class team {
         this.goalsAgainst = gA;
         this.difference = dif;
         this.points = pts;
+        this.tournament_id = tournament_id;
     }
     
     public String getTeamName(){
@@ -42,7 +44,7 @@ public class team {
         return this.gamesTied;
     }
     
-    public int gamesLost(){
+    public int getgamesLost(){
         return this.gamesLost;
     }
     
@@ -64,6 +66,9 @@ public class team {
     
     public int getPoints(){
         return this.points;
+    }
+    public int getTournament_id(){
+        return this.tournament_id;
     }
     @Override
     public String toString(){

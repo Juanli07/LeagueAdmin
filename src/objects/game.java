@@ -3,49 +3,42 @@ package objects;
 
 
 public class game {
+    private int id;
     private int journal;
-    private String team1;
-    private String team2;
-    private int goalsT1;
-    private int goalsT2;
-    private String Scorers;
+    private String teams;
+    private String schedule;
+    private String date;
+    private String scorers;
     
     
-    public game(int jrnl, String tm1, String tm2, int gT1, int gT2, String scrs){
+    public game(int id, int jrnl, String teams, String schedule, String date, String scorers){
+        this.id = id;
         this.journal = jrnl;
-        this.team1 = tm1;
-        this.team2 = tm2;
-        this.goalsT1 = gT1;
-        this.goalsT2 = gT2;
-        this.Scorers = scrs;
+        this.teams = teams;
+        this.schedule = schedule;
+        this.date = date;
+        this.scorers = scorers;
+        
     }
     
+    public int getId(){
+        return this.id;
+    }
     public int getJournal(){
         return this.journal;
     }
     
-    public String getTeam1(){
-        return this.team1;
+    public String getTeams(){
+        return this.teams;
     }
-    
-    public String getTeam2(){
-        return this.team2;
+    public String getSchedule(){
+        return this.schedule;
     }
-    
-    public int getGoalsT1(){
-        return this.goalsT1;
+    public String getDate(){
+        return this.date;
     }
-    
-    public int getGoalsT2(){
-        return this.goalsT2;
-    }
-    
     public String getScorers(){
-        return this.Scorers;
+        return this.scorers;
     }
     
-    @Override
-    public String toString(){
-        return("Jornada: " + this.journal + " | Team 1: " + this.team1 + " | Team 2: " + this.team2 + " | Goals T1: " + this.goalsT1 + " | Goals T2: " + this.goalsT2 + " | Scorers: " + this.Scorers);
-    }
 }

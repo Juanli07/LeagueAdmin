@@ -12,7 +12,9 @@ pending_games INT(10),
 goals_favor INT(10),
 goals_againts INT(10),
 difference INT(10),
-points INT(10)
+points INT(10),
+tournament_id INT(10),
+FOREIGN KEY(tournament_id) REFERENCES tournament(id)
 );
 
 CREATE TABLE played_games(
@@ -20,6 +22,7 @@ id INT NOT NULL PRIMARY KEY,
 journal INT(10),
 teams VARCHAR(50),
 schedule VARCHAR(50),
+marker VARCHAR(5),
 date VARCHAR(50),
 scorers LONGTEXT
 );
