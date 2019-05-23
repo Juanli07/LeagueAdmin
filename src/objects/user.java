@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package objects;
 
-/**
- *
- * @author ancient_gear
- */
 public class user {
+    private String User;
     
+    public user(String usr){
+        this.User = usr;
+    }
+    
+    public String getUser(){
+        return this.User;
+    }
+    
+    public String toString(){
+        return ("User: " + this.User);
+    }
 }
